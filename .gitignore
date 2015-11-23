@@ -1,0 +1,3 @@
+html/vagrant/**/*
+!html/vagrant/changeme**/*
+conf.d/nginx-vagrant-boxes.conf
