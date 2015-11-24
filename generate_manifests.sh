@@ -47,7 +47,7 @@ do
     fi
 
     # Write the json for the current box
-    echo -n "{\"version\":\"$version\",\"providers\":[{\"name\":\"virtualbox\",\"url\":\"http://$server_name:$port/vagrant/$name/boxes/$box_file\",\"checksum_type\":\"sha1\",\"checksum\":\"$checksum\"}]}" >> $tmp_manifest_file
+    echo -n "{\"version\":\"$version\",\"providers\":[{\"name\":\"virtualbox\",\"url\":\"http://$cfg_hostname:$cfg_port/vagrant/$name/boxes/$box_file\",\"checksum_type\":\"sha1\",\"checksum\":\"$checksum\"}]}" >> $tmp_manifest_file
     echo
   done
   echo "]}" >> $tmp_manifest_file
