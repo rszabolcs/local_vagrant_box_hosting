@@ -1,5 +1,5 @@
 # Hosting vagrant boxes
-#### Sets up a nginx server which hosts vagrant boxes
+#### Sets up an nginx server which hosts vagrant boxes
 
 ## Requirements
 * *nix (tested with Ubuntu 14.04)
@@ -28,3 +28,5 @@
 * You may specify an alternate hostname/port in the .env file in the project root.
  * Host defaults to `hostname --fqdn`
  * Port defaults to `1234`
+
+Thanks to https://github.com/hollodotme/Helpers/blob/master/Tutorials/vagrant/self-hosted-vagrant-boxes-with-versioning.md#5-hosting for the walkthrough.
