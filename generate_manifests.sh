@@ -34,9 +34,9 @@ do
     fi
     echo "  Parsed name [ $name ] and version [ $version ]"
 
-    # Generate sha1 checksum
-    echo "  Generating sha1 checksum"
-    checksum="`sha1sum $box_file | awk '{print $1}'`"
+    # Generate sha256 checksum
+    echo "  Generating sha256 checksum"
+    checksum="`sha256sum $box_file | awk '{print $1}'`"
 
     # Fencepost problem
     if [ "$first" = "true" ]
@@ -47,7 +47,7 @@ do
     fi
 
     # Write the json for the current box
-    echo -n "{\"version\":\"$version\",\"providers\":[{\"name\":\"virtualbox\",\"url\":\"http://$cfg_hostname:$cfg_port/vagrant/$name/boxes/$box_file\",\"checksum_type\":\"sha1\",\"checksum\":\"$checksum\"}]}" >> $tmp_manifest_file
+    echo -n "{\"version\":\"$version\",\"providers\":[{\"name\":\"virtualbox\",\"url\":\"http://$cfg_hostname:$cfg_port/vagrant/$name/boxes/$box_file\",\"checksum_type\":\"sha256\",\"checksum\":\"$checksum\"}]}" >> $tmp_manifest_file
     echo
   done
   echo "]}" >> $tmp_manifest_file
