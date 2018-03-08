@@ -11,4 +11,4 @@ echo "Starting nginx-vagrant-boxes"
 docker run -d -p $cfg_port:$cfg_port \
   -v $cfg_path/html:/usr/share/nginx/html:ro \
   -v $cfg_path/conf.d/:/etc/nginx/conf.d/:ro \
-  --name nginx-vagrant-boxes nginx
+  --name nginx-vagrant-boxes nginx:stable-alpine
